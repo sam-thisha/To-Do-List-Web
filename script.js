@@ -8,7 +8,7 @@ const tasks=document.querySelector(".tasks");
 const trash=document.getElementById("trash");
 
 var add_val;
-var task;
+
 
 add_new.addEventListener("click",()=>{
     todo_box.classList.add("hide");
@@ -28,19 +28,18 @@ add_btn.addEventListener("click",()=>{
         const new_task=document.createElement("div");
         new_task.classList.add("task");
         new_task.innerHTML=`<label for="todo1">${add_val}</label>
-        <i class="fa-sharp fa-solid fa-trash"></i>
+        <i class="fa-sharp fa-solid fa-trash" id="trash" onclick="delete_task(this)"></i>
         <input type="checkbox" id="todo1">`;
         tasks.appendChild(new_task);
         todo_box.classList.remove("hide");
         add_new_container.classList.add("hide");
-
+		add_item.value="";
     }
 });
 
-trash.addEventListener("click",()=>{
-    task=trash.parentNode;
-    task.remove();
-})
-
+function delete_task(task){
+	task.parentNode.remove();
+}
+    
 
 
