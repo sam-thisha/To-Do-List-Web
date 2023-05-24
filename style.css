@@ -1,0 +1,143 @@
+:root {
+    --main-color: #9933ff;
+    --off-white: #FAF9F6;
+    --dark-gray:#333333;
+    --hover:#7128bb;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Pangolin', cursive;
+    font-size: 20px;
+    color: var(--dark-gray);
+}
+
+
+html, body, .container {
+    height: 100%;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.todo-box{
+    background-color: var(--off-white);
+}
+.heading {
+    padding:20px 140px 20px 140px;
+    margin: auto;
+    background-color: var(--main-color);
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.todo-container{
+    display: block;
+    width: 100%;
+    
+}
+
+.task{
+    padding: 5px 15px;
+}
+.task input{
+    float: right;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.fa-trash{
+    color: crimson;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.task:hover .fa-trash{
+    opacity: 1;
+    color: red;
+}
+.add-new{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+.add-new *{
+    color: white;
+}
+.add-new:hover{
+    background-color: var(--hover);
+}
+.fa-plus{
+    font-size: 20px;
+}
+.fa-trash{
+    float: right;
+}
+
+.add-new-container{
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    padding:20px 140px 20px 140px;
+    border-radius: 20px;
+}
+.add-new-container label{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.add-new-container input{
+    width: 400px;
+    margin-bottom: 10px;
+    background-color: var(--off-white);
+    border: none;
+    padding: 5px;
+}
+
+.add-new-container button{
+    width: 120px;
+    margin: 10px;
+    background-color: var(--off-white);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.add-new-container button:hover{
+    background-color: var(--hover);
+    color: whitesmoke;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center
+}
+
+.hide{
+    display: none;
+}
